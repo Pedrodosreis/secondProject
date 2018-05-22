@@ -27,7 +27,7 @@ const vistaLogoGrey = require('../src/img/vistaLogoGrey.png');
 
 
 // Funcition to render the ticket information
-function Button(flag1, flag2) {
+function Button(flag1, flag2, place1, place2) {
   return (
     
   	<div class="center margin-bottom-20">
@@ -44,14 +44,18 @@ function Button(flag1, flag2) {
 			</div>
 
 			<div class="flag-section">
-				<div class="text-size-10 all-left margin-left-30 grey-color"><b>A CORUNA </b></div>
-				<div class="text-size-10 margin-left-360 grey-color"> <b>A AALBORG </b></div>
-				<img class="flag all-left margin-left-30" src={flag1} />
-				<div class="grey-color all-left margin-left-20 text-size-25 "> LECO </div>
+				<div class="flex-row">
+					<div class="text-size-10 grey-color"><b>{place1} </b></div>
+					<div class="text-size-10 grey-color"> <b>{place2}</b></div>
+				</div>
+				<div class="flex-row">
+					<img class="flag " src={flag1} />
+					<div class="grey-color text-size-25 "> LECO </div>
 
-				<img class="perc-10 rotate-90 middle-image all-left margin-left-20 margin-right-20" src={airplaneIcon} />
-				<div class="grey-color all-left text-size-25"> EKYT </div>
-				<img class="flag margin-left-20" src={flag2} />
+					<img class="perc-10 rotate-90 middle-image all-left margin-left-20 margin-right-20" src={airplaneIcon} />
+					<div class="grey-color all-left text-size-25"> EKYT </div>
+					<img class="flag margin-left-20" src={flag2} />
+				</div>
 				<div class="space-around">
 					<div class="text-size-10 grey-color margin-left-30">20.6C </div>
 					<div class="text-size-10 grey-color margin-right-30">19.5C</div>
@@ -102,6 +106,15 @@ function mainHeader() {
 	
 }
 
+function backgroundImageWay() {
+	return(
+		<div class="background-image" style= {{backgroundImage: `url(${backImage})`}}>
+			<h1>OLA MUNDO</h1>
+		</div>
+	);
+	
+}
+
 // Component to call the page element
 class MyComponentClass extends React.Component {
   render() {
@@ -109,10 +122,10 @@ class MyComponentClass extends React.Component {
     	{upperHeader()}
     	{sideMenu()}
     	{mainHeader()}
-    	{Button(esFlag, dkFlag)}
-    	{Button(frFlag, euaFlag)}
-    	{Button(ukFlag, gerFlag)}
-    	{Button(brFlag, pqFlag)}
+    	{Button(esFlag, dkFlag, "A CORUNA", "A AALBORG")}
+    	{Button(frFlag, euaFlag, "PARIS", "NEW YORK")}
+    	{Button(ukFlag, gerFlag, "UK CITY", "GERMANY CITY")}
+    	{Button(brFlag, pqFlag, "SÃO PAULO", "PAQUISTAN CITY")}
     </div>
   }
 }
