@@ -1,0 +1,41 @@
+const myList = (
+	<div class="">
+		<div class="left">
+			<img class="backimage" src={backImage} alt="mountain"/>
+			<img class="frontimage" src={frontImage} alt="Aircraft cl605" />
+			<p class="text-image">CHALLENGER 605</p>
+		</div> 
+
+		<div class="right">
+			<div class="gray-header">
+				<p>
+					<i class="material-icons margin-left-30">insert_invitation</i> August 06, 2016 
+					<i class="material-icons margin-left-30">access_time</i> 03:00 
+					<i class="material-icons margin-left-30">group</i> Passenger:1
+				</p>
+			</div>
+
+
+			<div class="flag-section">
+				<div class="text-size-10 all-left margin-left-30 gray-color"><b>A CORUNA </b></div>
+				<div class="text-size-10 margin-left-360 gray-color"> <b>A AALBORG </b></div>
+				<img class="flag all-left margin-left-30" src={esFlag} />
+				<div class="gray-color all-left margin-left-20 text-size-25 "> LECO </div>
+
+				<img class="middle-image all-left margin-left-20 margin-right-20" src={airplaneIcon} />
+				<div class="gray-color all-left text-size-25"> EKYT </div>
+				<img class="flag margin-left-20" src={dkFlag} />
+				<div>
+					<div class="text-size-10 gray-color all-left margin-left-60">20.6C </div>
+					<div class="text-size-10 gray-color margin-left-350">19.5C</div>
+				</div>
+			</div>
+			
+			<hr class="margin-left-30 margin-top-10 margin-bottom-10" />
+			<div>
+				<div class="all-left margin-left-30 gray-color text-size-20"><b>ETD: 09:20 loc </b></div>
+				<div class="margin-left-300 gray-color text-size-20"> <b>ETA: 12:20 loc </b></div>
+			</div>
+		</div>
+	</div>
+	);
